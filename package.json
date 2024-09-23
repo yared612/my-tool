@@ -5,5 +5,9 @@
   "scripts": {
     "heroku-postbuild": "cd frontend && npm install && npm run build && cp -r build/* ../backend/static/"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  }
 }
