@@ -1,0 +1,12 @@
+# Flask
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+
+# React
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Heroku
+.env

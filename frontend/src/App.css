@@ -1,0 +1,67 @@
+/* Import react-big-calendar css */
+@import '~react-big-calendar/lib/css/react-big-calendar.css';
+
+/* src/App.css */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* main-layout flexbox */
+.main-layout {
+  display: flex;
+  margin-top: 50px; /* Navbar hight */
+  height: calc(100vh - 50px);
+}
+
+/* Sidebar width */
+.sidebar {
+  width: 15%;
+  background-color: #333;
+  color: white;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Content width */
+.content {
+  transition: margin-left 0.3s;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar-open {
+  width: 85%;
+}
+
+.sidebar-closed {
+  width: 100%;
+}
+
+/* calendar cell */
+.custom-date-cell {
+  background-color: white;
+}
+
+/* calendar cell hover */
+.custom-date-cell:hover {
+  background-color: #e6f7ff !important; /* hover color */
+  cursor: pointer;
+}
+
+/* calendar selected cell */
+.selected-date-cell {
+  background-color: #bae7ff !important; /* select background color */
+}
+
+/* slove css conflict */
+.rbc-month-view .rbc-date-cell.custom-date-cell:hover {
+  background-color: #e6f7ff !important;
+}
