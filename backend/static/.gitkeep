@@ -1,0 +1,2 @@
+git add backend/static/.gitkeep
+git commit -m "Add .gitkeep to ensure backend/static directory exists"
