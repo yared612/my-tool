@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://mytool-6736aca6ec4e.herokuapp.com',
   withCredentials: true,
 });
 

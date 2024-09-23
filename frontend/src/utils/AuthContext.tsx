@@ -53,7 +53,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const login = () => {
     console.log('Redirecting to LINE Login...');
-    window.location.href = 'http://localhost:5000/auth/line'; // 后端登录端点
+    window.location.href = '/auth/line'; // 后端登录端点
   };
 
   const logout = async () => {

@@ -24,7 +24,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/auth/line");
+        const response = await fetch("/auth/line");
         if (response.ok) {
           const data = await response.json();
           console.log('Auth data: ', data)
