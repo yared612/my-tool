@@ -2,6 +2,9 @@ import json
 import logging
 import os
 import secrets
+import sys
+
+sys.path.append("/backend")
 
 import requests
 from dotenv import load_dotenv
