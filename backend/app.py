@@ -17,7 +17,7 @@ from utils.auto_calendar import *
 # load dot env setting
 load_dotenv()
 
-app = Flask(__name__, static_folder="static", static_url_path="/static", static_cache_timeout=3600)
+app = Flask(__name__, static_folder="static", static_url_path="/static")
 swagger = Swagger(app)
 app.secret_key = os.urandom(24)
 
