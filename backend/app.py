@@ -9,7 +9,7 @@ sys.path.append("/app/backend")
 import requests
 from dotenv import load_dotenv
 from flasgger import Swagger
-from flask import Flask, jsonify, redirect, request, session, url_for
+from flask import Flask, jsonify, redirect, render_template, request, session, url_for
 from flask_cors import CORS
 from handler.mongoHandler import insertCompanyUser, insertWorkAttendance
 from linebot import LineBotApi, WebhookHandler
@@ -48,19 +48,7 @@ handler = WebhookHandler(channelSecret)
 
 @app.route("/")
 def index():
-    """server health
-    Test server is health
-    ---
-    definitions:
-      Response:
-        type: string
-    responses:
-      200:
-        description: A runing string text
-        schema:
-          $ref: '#/definitions/Response'
-    """
-    return "Flask Backend is Running."
+    return render_template("index.html")
 
 
 @app.route("/auth/line", methods=["GET"])
@@ -115,7 +103,7 @@ def auth_line_callback():
         "status_message": status_message,
     }
 
-    return redirect("http://localhost:3000")
+    return redirect(serviceUrl)
 
 
 @app.route("/api/user", methods=["GET"])
