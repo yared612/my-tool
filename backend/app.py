@@ -4,7 +4,7 @@ import os
 import secrets
 import sys
 
-sys.path.append("/backend")
+sys.path.append("app/backend")
 
 import requests
 from dotenv import load_dotenv
